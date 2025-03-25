@@ -1,0 +1,9 @@
+/* body 전체 영역 */
+body { display: flex; justify-content: center; background-color: #fff; }
+
+/* container 전체 */
+.container { display: flex; width: auto; border: 1px solid black; }
+
+
+/* header 영역 */
+.logoImg { width: 103px; height: 29px;}
