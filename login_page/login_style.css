@@ -1,0 +1,27 @@
+body {
+  padding: 50px 50px 150px 150px !important;
+  /* margin: 50px 50px 150px 150px !important; */
+  background-color: black;
+}
+
+.left_page {
+  position: relative;
+  padding: 20px 20px 160px 160px;
+}
+
+.back_phone_img {
+  position: absolute;
+  width: 35%;  /* 배경 이미지 크기 조정 */
+  height: auto; /* 비율에 맞춰 높이 자동 조정 */
+}
+
+.right_page {
+  position: relative;
+  padding: 20px 20px 160px 160px;
+}
+
+.login_box {
+  border: 2px solid gray; /* 두께와 스타일을 명시적으로 설정 */
+  width: 300px;  /* 박스의 너비 설정 */
+  height: 200px;  /* 박스의 높이 설정 */
+}
