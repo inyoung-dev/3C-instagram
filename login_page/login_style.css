@@ -1,27 +1,48 @@
 body {
-  padding: 50px 50px 150px 150px !important;
   /* margin: 50px 50px 150px 150px !important; */
   background-color: black;
 }
 
+.main_box {
+  padding: 50px 50px !important;
+  display: flex;
+  justify-content: center;  /* 자식 요소들을 수평으로 중앙 정렬 */
+  align-items: center;  /* 자식 요소들을 수직으로 중앙 정렬 */
+  gap: 50px;  /* 왼쪽 이미지와 오른쪽 박스 사이에 간격을 추가 (여기서 20px은 조정할 수 있는 값) */
+
+}
+
 .left_page {
   position: relative;
+  display: flex;  /* 자식 요소들을 flexbox로 정렬 */
+  justify-content: center;  /* 수평 중앙 정렬 */
+  align-items: center;  /* 수직 중앙 정렬 */
   padding: 20px 20px 160px 160px;
 }
 
 .back_phone_img {
   position: absolute;
-  width: 35%;  /* 배경 이미지 크기 조정 */
-  height: auto; /* 비율에 맞춰 높이 자동 조정 */
+  width: 480px;  /* 고정된 크기 */
+  height: 600px; /* 고정된 크기 */
+  transform: translateY(60px); /* 이미지를 20px 정도 아래로 이동 */
 }
 
 .right_page {
+  display: flex;
   position: relative;
   padding: 20px 20px 160px 160px;
+  flex-direction: column;  /* 자식 요소들을 세로로 배치 */
+  gap: 20px;  /* 자식 요소 간 간격 설정 */
 }
 
 .login_box {
-  border: 2px solid gray; /* 두께와 스타일을 명시적으로 설정 */
+  border: 1px solid rgb(126, 126, 126); /* 두께와 스타일을 명시적으로 설정 */
   width: 300px;  /* 박스의 너비 설정 */
-  height: 200px;  /* 박스의 높이 설정 */
+  height: 400px;  /* 박스의 높이 설정 */
+}
+
+.account_box {
+  border: 1px solid rgb(126, 126, 126); /* 두께와 스타일을 명시적으로 설정 */
+  width: 300px;  /* 박스의 너비 설정 */
+  height: 60px;  /* 박스의 높이 설정 */
 }
