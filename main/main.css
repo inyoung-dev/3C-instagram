@@ -54,3 +54,8 @@
 .recommend-list img { width: 32px; height: 32px; border-radius: 50%; }
 .recommend-list .user-text { flex-grow: 1; margin-left: 10px; }
 .recommend-list a { color: #0095f6; font-weight: 600; font-size: 12px; }
+
+/* footer 영역 */
+.footer-wrap {
+  font-size: 13px;
+}
