@@ -1,6 +1,6 @@
 body {
-  /* margin: 50px 50px 150px 150px !important; */
   background-color: black;
+  color: aliceblue;
 }
 
 .main_box {
@@ -8,8 +8,7 @@ body {
   display: flex;
   justify-content: center;  /* 자식 요소들을 수평으로 중앙 정렬 */
   align-items: center;  /* 자식 요소들을 수직으로 중앙 정렬 */
-  gap: 50px;  /* 왼쪽 이미지와 오른쪽 박스 사이에 간격을 추가 (여기서 20px은 조정할 수 있는 값) */
-
+  gap: 50px;  /* 왼쪽 이미지와 오른쪽 박스 사이에 간격을 추가 */
 }
 
 .left_page {
@@ -24,7 +23,7 @@ body {
   position: absolute;
   width: 480px;  /* 고정된 크기 */
   height: 600px; /* 고정된 크기 */
-  transform: translateY(60px); /* 이미지를 20px 정도 아래로 이동 */
+  transform: translateY(40px); /* 이미지를 20px 정도 아래로 이동 */
 }
 
 .right_page {
@@ -33,6 +32,7 @@ body {
   padding: 20px 20px 160px 160px;
   flex-direction: column;  /* 자식 요소들을 세로로 배치 */
   gap: 20px;  /* 자식 요소 간 간격 설정 */
+  text-align: center;
 }
 
 .login_box {
@@ -45,4 +45,36 @@ body {
   border: 1px solid rgb(126, 126, 126); /* 두께와 스타일을 명시적으로 설정 */
   width: 300px;  /* 박스의 너비 설정 */
   height: 60px;  /* 박스의 높이 설정 */
+}
+
+/* .download_btn을 absolute로 처리하여 다른 요소에 영향을 주지 않도록 설정 */
+.download_btn {
+  display: flex;  /* 이미지를 수평으로 배치 */
+  justify-content: center;  /* 이미지들을 수평으로 중앙 배치 */
+  gap: 10px;  /* 이미지 간의 간격 설정 */
+  margin-top: 20px; /* h2와 버튼들 사이에 간격 추가 */
+  position: absolute;  /* 절대 위치로 배치 */
+  top: 80%; /* 상단에서 50% 위치 */
+  left: 63%; /* 좌측에서 50% 위치 */
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+
+.google_btn_img, .apple_btn_img {
+  width: 60%; /* 버튼의 크기를 설정 */
+  height: auto; /* 비율에 맞춰서 높이 자동 설정 */
+  object-fit: contain;  /* 버튼이 늘어나지 않도록 비율을 유지하면서 크기 조정 */
+}
+
+.footer-links {
+  margin-top: 5px;
+  text-align: center;
+  gap: 10px; /* 간격 조정 */
+  display: flex; /* flex 레이아웃 적용 */
+  justify-content: center; /* 자식 요소들을 수평으로 중앙 정렬 */
+}
+
+.footer-links a {
+  color: rgb(146, 146, 146) !important;
+  text-decoration: none;
+  font-size: 14px;
 }
