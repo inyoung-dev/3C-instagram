@@ -12,14 +12,21 @@
 .nav-item li svg, .nav-item li img  { width: 24px; height: 24px; display: block; border-radius: 50%; }
 .nav-item li span { line-height: 24px; position: relative; top: 2.5px;}
 
-
-/* 중앙 영역 */
+/* 팝업 메뉴 스타일 */
+/* 팝업 메뉴 스타일 */
+.more-menu { position: absolute; left: 80px; bottom: 100px; background-color: #fff; border: 1px solid #dbdbdb; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); width: 200px; padding: 10px 0; z-index: 9999; }
+.hidden { display: none; }
+.more-menu ul { list-style: none; margin: 0; padding: 0; }
+.more-menu li { padding: 10px 20px; cursor: pointer; font-size: 14px; }
+.more-menu li:hover { background-color: #f2f2f2; }
+.more-menu hr { border: none; border-top: 1px solid #dbdbdb; margin: 10px 0; }
 .center-wrap { flex: 2; margin: 0 130px; }
 
 /* 스토리 영역 */
 .stories ul { display: flex; list-style: none; margin-bottom: 20px; }
 .stories li { margin-right: 15px; text-align: center; font-size: 14px; }
-.stories img { width: 60px; height: 60px; border-radius: 50%; border: 2px solid #ff8501; }
+.story-ring { display: inline-block; border-radius: 50%; background: linear-gradient(45deg, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100% ); padding: 3px;}
+.story-ring img { width: 60px; height: 60px; border-radius: 50%; border: 2px solid #fff; display: block; }
 
 /* 피드 포스트 */
 .feed .post { background: #fff; margin-bottom: 20px; margin-left: 75px; border-radius: 3px; max-width: 100%; width: min(470px); }
@@ -29,6 +36,15 @@
 .user-info { display: flex; align-items: center; }
 .user-info img { width: 32px; height: 32px; border-radius: 50%; margin-right: 10px; }
 .time { color: rgb(115, 115, 115); font-size: 14px; }
+.peed-comment p { margin: 5px 0; font-size: 14px; color: #262626; }
+.peed-comment strong { margin-right: 5px; font-weight: 800; }
+.more-link { color: #999; font-size: 14px; text-decoration: none; cursor: pointer; }
+.comments-all { margin: 5px 0; margin-top: 15px; }
+.comments-all a { color: #8e8e8e; font-size: 14px; text-decoration: none; cursor: pointer; }
+.add-comment { margin-bottom: 15px; }
+.add-comment input { width: 100%; border: none; outline: none; font-size: 14px; color: #262626; padding: 5px 0; }
+.add-comment input::placeholder {
+  color: #8e8e8e; }
 
 /* 포스트 이미지 */
 .post-image img { width: 100%; height: 585px; display: block; }
@@ -38,6 +54,7 @@
 .post-actions button { background: none; border: none; cursor: pointer; }
 .like-btn { padding-left: 0;}
 .save-btn { padding-right: 0;}
+
 
 /* 우측 영역 */
 .nav-bar ul { list-style: none; padding: 0; }
@@ -69,6 +86,7 @@
 .footer-wrap a { color: rgb(199, 199, 199); text-decoration: none; margin-right: 3px; }
 .link { margin-bottom: 10px; }
 .link-item { margin-bottom: 20px; }
+
 
 
 /**********/
