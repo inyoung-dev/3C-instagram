@@ -23,7 +23,20 @@
         
                     </div>
                     <div class="right_page">
-                        <div class="login_box"></div>
+                        <div class="login_box">
+                            <img src="./img/Instagram_logo.svg.png" alt="main_logo" class="main_logo">
+                        </div>
+                        <div class="input_login">
+                            <div class="input_box">
+                                <input type="text" id="username" name="username" placeholder="전화번호, 사용자 이름 또는 이메일" required>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" id="password" name="password" placeholder="비밀번호" required>
+                            </div>
+                            <div class="login_btn">
+                                <button>로그인</button>
+                            </div>
+                        </div>
                         <div class="account_box"></div>
                         <h2>앱을 다운로드 하세요.</h2>
                         <div class="download_btn">
@@ -51,8 +64,15 @@
             <a href="#"  target="_blank">Threads</a>
             <a href="#"  target="_blank">연락처 업로드 & 비사용자</a>
         </div>
-
-        <p>© 2025 회사명</p>
+        <div class="language-select">
+            <select id="language" name="language" onchange="changeLanguage()">
+                <option value="ko">한국어</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <p>© 2025 Instagram from Meta</p>
+        </div>
         <!-- 푸터 내용 -->
     </footer>
 </body>

@@ -39,6 +39,75 @@ body {
   border: 1px solid rgb(126, 126, 126); /* 두께와 스타일을 명시적으로 설정 */
   width: 300px;  /* 박스의 너비 설정 */
   height: 400px;  /* 박스의 높이 설정 */
+  justify-content: center;
+  display: flex;
+}
+
+.main_logo {
+  position: absolute;
+  width: 30%;
+  filter: brightness(0) invert(1);
+}
+
+.input_login {
+  justify-content: center;  
+  align-items: center; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;      
+  position: relative;  
+}
+
+.input_box {
+  position: absolute;
+  width: 70%;  /* 너비를 더 키움 (부모 요소의 70%) */
+  height: 100px;  /* 높이를 더 키움 (100px로 설정) */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_box input {
+  width: 100%;  /* 인풋창이 부모의 너비에 맞게 크기 설정 */
+  height: 12%;  /* 인풋창의 높이를 부모 박스와 같게 설정 */
+  font-size: 12px;  /* 글자 크기 키우기 */
+  padding: 10px;  /* 텍스트 입력 영역에 여백 추가 */
+  border: 1px solid rgb(156, 156, 156);  
+  border-radius: 5px;  /* 둥근 모서리 */
+  background-color: rgb(28, 28, 28);
+}
+
+.input_box:first-child {
+  margin-bottom: 10px;  /* 첫 번째 입력창과 두 번째 입력창 사이 여백 */
+}
+
+.input_box:last-child {
+  margin-top: 10px; /* 두 번째 입력창과 로그인 버튼 사이 여백 */
+}
+
+.login_btn {
+  position: absolute;  
+  top: 10%;  /* 버튼의 상단 위치를 조정 */
+  width:78%;
+  margin-top: 20px;  /* 입력창과 버튼 간의 간격 설정 */
+  display: flex;
+}
+
+.login_btn button {
+  width: 100%;
+  height: 30px;
+  background-color: #0095F6;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.login_btn button:hover {
+  background-color: #007BB5;
 }
 
 .account_box {
@@ -53,7 +122,7 @@ body {
   justify-content: center;  /* 이미지들을 수평으로 중앙 배치 */
   gap: 10px;  /* 이미지 간의 간격 설정 */
   margin-top: 20px; /* h2와 버튼들 사이에 간격 추가 */
-  position: absolute;  /* 절대 위치로 배치 */
+  position: absolute; 
   top: 80%; /* 상단에서 50% 위치 */
   left: 63%; /* 좌측에서 50% 위치 */
   transform: translate(-50%, -50%); /* 중앙 정렬 */
@@ -65,8 +134,9 @@ body {
   object-fit: contain;  /* 버튼이 늘어나지 않도록 비율을 유지하면서 크기 조정 */
 }
 
+
 .footer-links {
-  margin-top: 5px;
+  margin-top: -70px;
   text-align: center;
   gap: 10px; /* 간격 조정 */
   display: flex; /* flex 레이아웃 적용 */
@@ -77,4 +147,25 @@ body {
   color: rgb(146, 146, 146) !important;
   text-decoration: none;
   font-size: 14px;
+}
+
+.language-select {
+  margin-top: 10px;
+  display: flex; /* flex 레이아웃 적용 */
+  justify-content: center;
+  gap: 15px;
+}
+
+.language-select select {
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: black;
+  color:  rgb(146, 146, 146) ;
+  border: none;
+}
+
+.language-select p {
+  margin: 15px; 
+  color:  rgb(146, 146, 146) ;
 }
