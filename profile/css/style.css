@@ -11,9 +11,12 @@ button {padding:0;cursor:pointer;}
 body, html {height:100%;background-color:#000;}
 .content {display:flex;align-items:flex-start;height:100%;}
 
+.hidden {border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}
+
 /* icon 버튼 초기셋팅 */
-[class^="ico_"]::before {content:'';display:inline-block;width:22px;height:22px;margin-right:14px;background-repeat:no-repeat;background-position:center;vertical-align:text-bottom;}
-[class^="ico_"] span {display:inline-block;vertical-align:middle;}
+[class^="ico_"] {display:flex;align-items:center;}
+[class^="ico_"]::before {content:'';display:block;width:22px;height:22px;margin-right:14px;background-repeat:no-repeat;background-position:center;}
+[class^="ico_"] span {display:block;}
 /* // icon 버튼 초기셋팅 */
 
 .header_wrap {padding:8px 12px 20px;max-width:244px;width:100%;height:100%;border-right:1px solid rgba(38, 38, 38)}
@@ -41,8 +44,8 @@ body, html {height:100%;background-color:#000;}
 .header_wrap .header_btm_box .ico_threads::before {background-image:url(../imgs/threads_icon.svg);}
 .header_wrap .header_btm_box .ico_more::before {background-image:url(../imgs/menu_icon.svg);}
 
-header + section {overflow-y:scroll;width:100%;height:100%;}
-header + section > main {margin:0 50px;padding:30px 20px 0;}
+header + section {display:flex;flex-flow:column;overflow-y:scroll;width:100%;height:100%;}
+header + section > main {flex:1;margin:0 auto 0;padding:30px 20px 0;max-width:935px;width:100%;}
 
 .profile_header {display:flex;align-items:flex-start;}
 .profile_header .img_wrap {margin-right:28px;padding-top:30px;position:relative;max-width:283px;width:100%;}
@@ -80,7 +83,38 @@ header + section > main {margin:0 50px;padding:30px 20px 0;}
 .story_wrap {margin:44px 0;}
 .story_wrap .story_inner {display:flex;align-items:center;}
 .story_wrap .story_inner button {padding:10px 15px;}
+.story_wrap .story_inner button .titImg_box.new {background:url(../imgs/plus_icon.svg) no-repeat center;background-size:60px;}
 .story_wrap .story_inner button .titImg_box {display:block;position:relative;width:89px;height:89px;}
 .story_wrap .story_inner button .titImg_box::before {content:"";display:block;position:absolute;top:calc(50% - 44px);left:calc(50% - 44px);width:88px;height:88px;background-color:transparent;border:1px solid #6a6a6a;border-radius:50%;}
 .story_wrap .story_inner button img {display:block;position:absolute;top:50%;left:50%;width:77px;height:77px;transform:translate3d(-50%, -50%, 0);object-fit:cover;border-radius:50%;overflow:hidden;}
-.story_wrap .story_inner button .tit_txt {display:block;margin-top:16px;color:#fff}
+.story_wrap .story_inner button .tit_txt {display:block;margin-top:16px;font-size:12px;color:#fff}
+
+.post_tab_wrap {border-top:1px solid rgb(38, 38, 38);}
+.post_tab_wrap .tab_list ul {display:flex;align-items:center;justify-content:center;}
+.post_tab_wrap .tab_list li {height:53px;line-height:53px;}
+.post_tab_wrap .tab_list li.active{border-top:1px solid #fff;}
+.post_tab_wrap .tab_list li + li {margin-left:60px;}
+.post_tab_wrap .tab_list li a {font-size:12px;color:rgb(245, 245, 245)}
+.post_tab_wrap .tab_list li [class^="ico_"]::before {width:12px;height:12px;}
+.post_tab_wrap .tab_list li .ico_posts::before {background-image:url(../imgs/posts_icon.svg);}
+.post_tab_wrap .tab_list li .ico_save::before {background-image:url(../imgs/save_icon.svg);}
+.post_tab_wrap .tab_list li .ico_tag::before {background-image:url(../imgs/tag_icon.svg);}
+
+.tab_cont .nonePost_inner {margin:60px auto 60px;max-width:260px;width:100%;text-align:center;}
+.addPost_btn {width:62px;height:62px;background:url(../imgs/camera_icon.svg) no-repeat center;background-size:40px;border:1px solid #fff;border-radius:50%;}
+.tab_cont .nonePost_inner .txt_box  {margin-top:24px;}
+.tab_cont .nonePost_inner .txt_box p,
+.tab_cont .nonePost_inner .txt_box span {display:block;color:#fff;}
+.tab_cont .nonePost_inner .txt_box p {font-size:30px;font-weight:600;}
+.tab_cont .nonePost_inner .txt_box span {margin-top:24px;font-size:13px;}
+.tab_cont .nonePost_inner button:last-child {margin-top:24px;}
+.tab_cont .nonePost_inner button:last-child span {font-size:14px;color:rgb(0, 149, 246);}
+.tab_cont .nonePost_inner button:last-child span:hover {color:#fff;}
+
+footer .link_wrap {margin-bottom:52px;}
+footer .link_inner {display:flex;justify-content:center;}
+footer .link_inner li {margin:0 8px 12px;}
+footer .link_inner a {font-size:12px;color:rgb(168, 168, 168);}
+footer .link_wrap .info_box {display:flex;align-items:center;justify-content:center;}
+footer .link_wrap .info_box select {border:none;outline:none;background:#000;font-size:12px;color:rgb(168, 168, 168);}
+footer .link_wrap .info_box span {margin-left:16px;font-size:12px;color:rgb(168, 168, 168);}

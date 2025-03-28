@@ -149,7 +149,7 @@
               </li>
               <li>
                 <button type="button">
-                  <span aria-hidden="true" class="titImg_box"></span>
+                  <span aria-hidden="true" class="new titImg_box"></span>
                   <span class="tit_txt">신규</span>
                 </button>
               </li>
@@ -158,22 +158,51 @@
           <div class="post_tab_wrap">
             <div class="tab_list">
               <ul>
-                <li>
-                  <a href="#none">
+                <li class="active">
+                  <a href="#none" class="ico_posts">
                     <span>게시물</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#none">
+                  <a href="#none" class="ico_save">
                     <span>저장됨</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#none">
-                    <span>태그됨</span>
+                  <a href="#none" class="ico_tag">
+                    태그됨
                   </a>
                 </li>
               </ul>
+            </div>
+            <div class="tab_cont">
+              <div class="cont01">
+
+                <!-- 게시물이 있는 경우 -->
+                 <!-- // 게시물이 있는 경우 -->
+
+                <!-- 게시물이 없는 경우 -->
+                <div class="nonePost_inner">
+                  <button type="button" class="addPost_btn" aria-label="사진 추가하기">
+                    <span class="hidden">사진을 공유하면 회원님의 프로필에 표시됩니다.</span>
+                  </button>
+                  <div class="txt_box">
+                    <p class="tit_txt">사진 공유</p>
+                    <span class="sub_txt">사진을 공유하면 회원님의 프로필에 표시됩니다.</span>
+                  </div>
+                  <button type="button">
+                    <span>첫 사진 공유하기</span>
+                  </button>
+                </div>
+                <!-- // 게시물이 없는 경우 -->
+
+              </div>
+              <div class="cont02">
+                
+              </div>
+              <div class="cont03">
+                
+              </div>
             </div>
           </div>
         </main>
@@ -194,14 +223,14 @@
               <li><a href="#none">연락처 업로드 & 비사용자</a></li>
               <li><a href="#none">Meta Verified</a></li>
             </ul>
-          </div>
-          <div class="info_box">
-            <div class="lang_sele">
-              <select name="" id="">
-                <option value="1">한국어</option>
-              </select>
+            <div class="info_box">
+              <div class="lang_sele">
+                <select name="" id="">
+                  <option value="1">한국어</option>
+                </select>
+              </div>
+              <span>© 2025 Instagram from Meta</span>
             </div>
-            <span>© 2025 Instagram from Meta</span>
           </div>
         </footer>
       </section>
